@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tapu Studio | Tatuajes en Santiago, RD</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;600;800&display=swap">
+<style>
+:root{--bg:#0a0607;--panel:#150c0e;--line:#2c1a1d;--text:#f6ede8;--mute:#b39d98;--red:#e5192b;--mag:#d4206c;--org:#ff6a1f;--grad:linear-gradient(100deg,var--mag,var(--red) 50%,var(--org));color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root{--grad:linear-gradient(100deg,#d4206c,#e5192b 50%,#ff6a1f)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;line-height:1.55}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--org);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:20;background:rgba(10,6,7,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-family:Anton,sans-serif;font-size:26px;letter-spacing:.04em}
+.logo small{display:block;font-family:Manrope;font-size:10px;letter-spacing:.35em;color:var(--red);font-weight:800;margin-top:-4px}
+nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-weight:600;font-size:14px}
+nav a:hover{color:var(--org)}
+.btn{display:inline-block;padding:13px 24px;border-radius:999px;font-weight:800;background:var(--grad);color:#fff;border:0;cursor:pointer;font-size:15px}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--text)}
+.btn.ghost:hover{border-color:var(--red)}
+.hero{position:relative;overflow:hidden;padding:72px 0 64px;background:radial-gradient(60% 80% at 85% 20%,rgba(255,106,31,.28),transparent 60%),radial-gradient(50% 70% at 0% 100%,rgba(212,32,108,.3),transparent 60%),radial-gradient(40% 60% at 55% 40%,rgba(229,25,43,.22),transparent 70%)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+h1{font-family:Anton,sans-serif;font-weight:400;font-size:clamp(64px,11vw,148px);line-height:.92;margin:0 0 18px;text-transform:uppercase}
+h1 span{display:block;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:19px;color:var(--mute);max-width:30ch;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.mark{width:100%;max-width:380px;justify-self:center;filter:drop-shadow(0 0 40px rgba(229,25,43,.45))}
+.tag{font-family:Anton;font-size:28px;letter-spacing:.03em;transform:rotate(-6deg);display:inline-block;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-top:10px}
+.perks{border-block:1px solid var(--line);background:var(--panel)}
+.perks .wrap{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;padding-block:22px}
+.perks b{display:block;font-size:14px}.perks span{font-size:13px;color:var(--mute)}
+section{padding:72px 0}
+h2{font-family:Anton,sans-serif;font-weight:400;font-size:clamp(34px,5vw,54px);text-transform:uppercase;margin:0 0 8px;letter-spacing:.01em}
+.sub{color:var(--mute);margin:0 0 32px;max-width:52ch}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.svc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px 22px;transition:border-color .2s}
+.svc:hover{border-color:var(--red)}
+.svc i{display:block;width:34px;height:4px;border-radius:2px;margin-bottom:16px}
+.svc h3{margin:0 0 6px;font-size:19px}.svc p{margin:0;color:var(--mute);font-size:14.5px}
+.svcs{grid-template-columns:repeat(6,1fr)}.svcs .svc{grid-column:span 2}.svcs .svc:nth-child(n+4){grid-column:span 3}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.ph{aspect-ratio:3/4;border-radius:14px;border:1px solid var(--line);display:flex;align-items:flex-end;padding:14px;font-size:13px;font-weight:600;color:rgba(255,255,255,.85);background:repeating-linear-gradient(135deg,rgba(255,255,255,.03) 0 10px,transparent 10px 20px),linear-gradient(160deg,var(--a),#0a0607 85%)}
+.note{color:var(--mute);font-size:13px;margin-top:14px}
+.more{background:var(--panel);border-block:1px solid var(--line)}
+.links{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.links a{display:block;padding:20px;border-radius:14px;border:1px solid var(--line);background:var(--bg);font-weight:800}
+.links a small{display:block;font-weight:400;color:var(--mute);margin-top:2px}
+.links a:hover{border-color:var(--org)}
+.links a.sos{border-color:var(--red);background:rgba(229,25,43,.12)}
+.rev{display:grid;grid-template-columns:minmax(0,560px);gap:14px}
+.rev blockquote{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
+.stars{color:var(--org);letter-spacing:3px}
+.rev cite{display:block;margin-top:12px;font-style:normal;font-weight:800;font-size:14px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.map{border-radius:14px;border:1px solid var(--line);min-height:240px;display:grid;place-items:center;text-align:center;background:linear-gradient(rgba(10,6,7,.7),rgba(10,6,7,.7)),repeating-linear-gradient(90deg,#2c1a1d 0 1px,transparent 1px 48px),repeating-linear-gradient(0deg,#2c1a1d 0 1px,transparent 1px 48px);padding:20px}
+form{display:grid;gap:12px}
+input,select,textarea{width:100%;padding:13px 14px;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--text);font:inherit}
+textarea{min-height:90px;resize:vertical}
+.ok{display:none;color:var(--org);font-weight:800}
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--mute);font-size:13px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center}
+footer em{font-style:normal;font-family:Anton;letter-spacing:.2em;color:var(--red)}
+@media(max-width:860px){nav ul{display:none}.hero .wrap,.contact{grid-template-columns:1fr}.mark{max-width:240px}.perks .wrap{grid-template-columns:repeat(2,1fr)}.grid3,.rev,.links,.svcs{grid-template-columns:1fr}.svcs .svc,.svcs .svc:nth-child(n+4){grid-column:auto}.gal{grid-template-columns:repeat(2,1fr)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="logo" href="#inicio" aria-label="Tapu Studio"><svg width="34" height="38" viewBox="0 0 100 112" fill="none"><path d="M10 14c14-12 32-6 40 8 8-14 26-20 40-8 8 10 2 26-10 34-8 5-12 14-12 26 0 16-8 26-18 26S32 90 32 74c0-12-4-21-12-26C8 40 2 24 10 14Z" stroke="url(#g)" stroke-width="7" stroke-linejoin="round"/><circle cx="50" cy="72" r="6" fill="#e5192b"/><defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#d4206c"/><stop offset=".55" stop-color="#e5192b"/><stop offset="1" stop-color="#ff6a1f"/></linearGradient></defs></svg><span>TAPU<small>STUDIO</small></span></a>
+<nav aria-label="Principal"><ul><li><a href="#servicios">Servicios</a></li><li><a href="#galeria">Portafolio</a></li><li><a href="#resenas">Reseñas</a></li><li><a href="#contacto">Ubicación</a></li></ul></nav>
+<a class="btn" href="#cita">Reservar cita</a>
+</div></header>
+
+<main id="inicio">
+<div class="hero"><div class="wrap">
+<div>
+<h1>Arte en <span>tu piel</span></h1>
+<p>Tatuajes con propósito, estilo y calidad.</p>
+<div class="cta"><a class="btn" href="#cita">Reservar cita</a><a class="btn ghost" href="#galeria">Ver galería</a></div>
+</div>
+<div style="text-align:center">
+<svg class="mark" viewBox="0 0 100 112" fill="none" aria-hidden="true"><path d="M10 14c14-12 32-6 40 8 8-14 26-20 40-8 8 10 2 26-10 34-8 5-12 14-12 26 0 16-8 26-18 26S32 90 32 74c0-12-4-21-12-26C8 40 2 24 10 14Z" stroke="url(#g2)" stroke-width="3.5" stroke-linejoin="round"/><circle cx="50" cy="72" r="4" fill="#e5192b"/><defs><linearGradient id="g2" x1="0" x2="1"><stop stop-color="#d4206c"/><stop offset=".55" stop-color="#e5192b"/><stop offset="1" stop-color="#ff6a1f"/></linearGradient></defs></svg>
+<span class="tag">Tu idea… nuestro arte</span>
+</div>
+</div></div>
+
+<div class="perks"><div class="wrap">
+<div><b>Diseños exclusivos</b><span>Ideas únicas y personalizadas</span></div>
+<div><b>Higiene profesional</b><span>Tu salud es primero</span></div>
+<div><b>Alta calidad</b><span>Detalles que perduran</span></div>
+<div><b>Precios justos</b><span>Calidad al mejor precio</span></div>
+<div><b>Ubicación</b><span>Santiago, RD</span></div>
+</div></div>
+
+<section id="servicios"><div class="wrap">
+<h2>Nuestros servicios</h2><p class="sub">Del primer boceto al último detalle, trabajamos contigo tu idea.</p>
+<div class="grid3 svcs">
+<div class="svc"><i style="background:#e5192b"></i><h3>Tatuajes personalizados</h3><p>Diseño hecho a tu medida, contigo desde el boceto.</p></div>
+<div class="svc"><i style="background:#d4206c"></i><h3>Cover up</h3><p>Renueva o tapa un tatuaje anterior con un diseño nuevo.</p></div>
+<div class="svc"><i style="background:#ff6a1f"></i><h3>Tatuajes finos</h3><p>Línea fina, trazos delicados y minimalistas.</p></div>
+<div class="svc"><i style="background:#ff6a1f"></i><h3>Diseños a color</h3><p>Color vivo y saturado que se mantiene con los años.</p></div>
+<div class="svc"><i style="background:#d4206c"></i><h3>Piercings</h3><p>Perforaciones con joyería de calidad y técnica segura.</p></div>
+</div></div></section>
+
+<section id="galeria" style="padding-top:0"><div class="wrap">
+<h2 id="p-tatuajes">Portafolio de tatuajes</h2><p class="sub">Piezas reales de nuestros clientes.</p>
+<div class="gal">
+<div class="ph" style="--a:#e5192b">León con corona</div>
+<div class="ph" style="--a:#d4206c">Rosa realista</div>
+<div class="ph" style="--a:#ff6a1f">Cruz y rayos</div>
+<div class="ph" style="--a:#8f1020">Reloj y brazo completo</div>
+</div>
+<h2 id="p-piercing" style="margin-top:56px">Portafolio de piercing</h2><p class="sub">Perforaciones y joyería colocadas en el estudio.</p>
+<div class="gal">
+<div class="ph" style="--a:#d4206c">Helix</div>
+<div class="ph" style="--a:#e5192b">Nostril</div>
+<div class="ph" style="--a:#ff6a1f">Ombligo</div>
+<div class="ph" style="--a:#8f1020">Labret</div>
+</div>
+</div></section>
+
+<section id="mas" class="more"><div class="wrap">
+<h2>Accesos rápidos</h2><p class="sub">Portafolios, citas y ayuda en un toque.</p>
+<div class="links">
+<a href="#p-tatuajes">Portafolio de tatuajes<small>Mira nuestros trabajos</small></a>
+<a href="#p-piercing">Portafolio de piercing<small>Mira nuestros trabajos</small></a>
+<a href="#cita">Quiero cita<small>Reserva tu fecha</small></a>
+<a href="https://wa.me/18090000000">WhatsApp / necesito ayuda<small>Escríbenos directo</small></a>
+<a href="#">Blog de cuidados<small>Guías para cicatrizar bien</small></a>
+<a class="sos" href="tel:+18090000000">Teléfono de emergencia<small>Si tienes una complicación, llama</small></a>
+</div></div></section>
+
+<section id="resenas"><div class="wrap">
+<h2>Reseñas de clientes</h2><p class="sub">Lo que dicen quienes ya llevan nuestro arte.</p>
+<div class="rev">
+<blockquote><div class="stars">★★★★★</div><p>Excelente servicio, muy profesional. El resultado superó mis expectativas. 100% recomendado.</p><cite>Carlos M.</cite></blockquote>
+</div></div></section>
+
+<section id="cita" style="padding-top:0"><div class="wrap contact">
+<div>
+<h2>Reservar cita</h2><p class="sub">Cuéntanos tu idea y te respondemos por WhatsApp.</p>
+<form id="f">
+<input name="n" placeholder="Tu nombre" required aria-label="Tu nombre">
+<select name="s" aria-label="Servicio"><option>Tatuaje personalizado</option><option>Cover up</option><option>Tatuaje fino</option><option>Diseño a color</option><option>Black &amp; grey</option><option>Piercing</option></select>
+<textarea name="m" placeholder="Describe tu idea y la zona del cuerpo" aria-label="Tu idea"></textarea>
+<button class="btn" type="submit">Enviar por WhatsApp</button>
+<span class="ok" id="ok">Abriendo WhatsApp…</span>
+</form>
+</div>
+<div id="contacto">
+<h2>Nuestra ubicación</h2><p class="sub">Santiago de los Caballeros, RD. En el corazón de Santiago.</p>
+<div class="map"><div><b>Tapu Studio</b><br><span style="color:var(--mute)">Santiago de los Caballeros, RD</span><br><br><a class="btn ghost" href="https://maps.google.com/?q=Santiago+de+los+Caballeros">Ver en Google Maps</a></div></div>
+<p class="note"><a href="#">Instagram</a> &nbsp; <a href="#">TikTok</a> &nbsp; <a href="#">YouTube</a> &nbsp; <a href="https://wa.me/18090000000">WhatsApp</a></p>
+</div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Tapu Studio. Todos los derechos reservados.</span><span>Términos · Privacidad · Preguntas frecuentes</span><em>TATUAR ES DEJAR HUELLA</em></div></footer>
+
+<script>
+document.getElementById('f').addEventListener('submit',function(e){
+e.preventDefault();var d=new FormData(e.target);
+var t='Hola Tapu Studio, soy '+d.get('n')+'. Quiero cita para: '+d.get('s')+'. '+d.get('m');
+document.getElementById('ok').style.display='block';
+window.open('https://wa.me/18090000000?text='+encodeURIComponent(t),'_blank');
+});
+</script>
+</body>
+</html>
