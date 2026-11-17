@@ -112,7 +112,11 @@ header.open nav ul{display:flex}
 .hero .wrap,.split,.trio,.rev{grid-template-columns:1fr}.mark{display:none}.split{gap:44px}
 .steps{grid-template-columns:1fr}
 }
-@media(max-width:520px){.svcs{grid-template-columns:1fr}.gal{gap:10px}.cta .btn{flex:1}}
+@media(max-width:520px){
+  .svcs{grid-template-columns:1fr}
+  .gal{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .cta .btn{flex:1}
+}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
 </head>
